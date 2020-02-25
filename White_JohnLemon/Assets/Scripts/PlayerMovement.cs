@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         bool hasVerticalInput = !Mathf.Approximately(vertical, 0f);
         bool isWalking = hasHorizontalInput || hasVerticalInput;
 
-        m_Animator.SetBool("IsWalking", isWalking);
+      //  m_Animator.SetBool("IsWalking", isWalking);
         if (isWalking)
         {
             if (!m_AudioSource.isPlaying)
