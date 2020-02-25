@@ -442,6 +442,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd785a7f20edf6d40aa46f4117f37fb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  navMeshAgent: {fileID: 9147203046213628785}
+  waypoints: []
 --- !u!54 &7832503551544196980
 Rigidbody:
   m_ObjectHideFlags: 0
