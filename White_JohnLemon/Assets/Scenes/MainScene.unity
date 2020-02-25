@@ -988,7 +988,6 @@ GameObject:
   m_Component:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
-  - component: {fileID: 963194226}
   - component: {fileID: 963194229}
   - component: {fileID: 963194230}
   m_Layer: 8
@@ -998,14 +997,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &963194226
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0
@@ -1194,7 +1185,9 @@ MonoBehaviour:
   displayImageDuration: 1
   player: {fileID: 1312379575}
   exitBackgroundImageCanvasGroup: {fileID: 1691259581}
+  exitAudio: {fileID: 813981070}
   caughtBackgroundImageCanvasGroup: {fileID: 1664669733}
+  caughtAudio: {fileID: 1874227799}
 --- !u!65 &1032174079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5828,20 +5821,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4242697442390911450, guid: 2dddf46e179c9744ab29bf4a33795787,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.99999994
-      objectReference: {fileID: 0}
-    - target: {fileID: 4242697442390911450, guid: 2dddf46e179c9744ab29bf4a33795787,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.99999994
-      objectReference: {fileID: 0}
-    - target: {fileID: 4242697442400519730, guid: 2dddf46e179c9744ab29bf4a33795787,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 96cbf7376ab82474cac532167a47cbbf, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dddf46e179c9744ab29bf4a33795787, type: 3}
