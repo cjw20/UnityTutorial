@@ -634,7 +634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   turnSpeed: 20
-  gameEnding: {fileID: 0}
+  gameEnding: {fileID: 1032174078}
 --- !u!54 &702532716
 Rigidbody:
   m_ObjectHideFlags: 0
