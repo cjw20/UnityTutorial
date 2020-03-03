@@ -17,7 +17,7 @@ public class Printmaker : MonoBehaviour
     // Update is called once per frame
     void MakePrint()
     {
-        Vector3 spawnLocation = new Vector3(Intruder.position.x, 0, Intruder.position.z);
+        Vector3 spawnLocation = new Vector3(Intruder.position.x, Intruder.position.y, Intruder.position.z);
         Instantiate(Footprint, spawnLocation, Rotation);
     }
 }
