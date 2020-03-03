@@ -9,6 +9,8 @@ public class GhostMovement : MonoBehaviour
     Quaternion m_Rotation = Quaternion.identity;
     private Rigidbody body;
     Vector3 m_Movement;
+    public GameEnding gameEnding;
+    bool m_IsPlayerInRange;
 
 
     // Start is called before the first frame update
@@ -35,5 +37,14 @@ public class GhostMovement : MonoBehaviour
         m_Rotation = Quaternion.LookRotation(desiredForward);
         body.MoveRotation(m_Rotation);
 
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Intruder"))
+        {
+            m_IsPlayerInRange = true;
+            gameEnding.CaughtPlayer();
+        }   
+        
     }
 }
