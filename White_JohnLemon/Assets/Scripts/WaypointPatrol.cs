@@ -8,6 +8,8 @@ public class WaypointPatrol : MonoBehaviour
     public NavMeshAgent navMeshAgent;
     public Transform[] waypoints;
     public Transform player;
+    public Transform Intruder;
+    
     int m_CurrentWaypointIndex;
     // Start is called before the first frame update
     void Start()
@@ -20,20 +22,32 @@ public class WaypointPatrol : MonoBehaviour
     {
         float farPoint = 0f; //variable for storing fathest waypoint from player
         Vector3 target = Vector3.zero;
-
-        foreach (Transform point in waypoints)
+        RaycastHit hit;
+        Vector3 rayDirection = player.position - Intruder.position;
+        if (Physics.Raycast(transform.position, rayDirection, out hit))  //makes it so intruder won't move unless spotted by player
         {
-            float playerDistance = Vector3.Distance(player.position, point.position);
-
-            if(playerDistance > farPoint)
+            if (hit.transform == player)
             {
-                farPoint = playerDistance;
-                target = point.position;
-            }
+                foreach (Transform point in waypoints)
+                {
+                    float playerDistance = Vector3.Distance(player.position, point.position);
 
-            
+                    if (playerDistance > farPoint)
+                    {
+                        farPoint = playerDistance;
+                        target = point.position;
+                    }
+
+
+                }
+                navMeshAgent.SetDestination(target);
+            }
+           else
+           {
+                // there is something obstructing the view
+           }
         }
-        navMeshAgent.SetDestination(target);
+        
 
         // if(navMeshAgent.remainingDistance < navMeshAgent.stoppingDistance)
         //{
