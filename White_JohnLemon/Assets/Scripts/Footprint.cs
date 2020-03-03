@@ -5,6 +5,8 @@ using UnityEngine;
 public class Footprint : MonoBehaviour
 {
     public float lifespan = 5f; //time footprint is visible after being placed
+    public GameObject self;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,6 @@ public class Footprint : MonoBehaviour
     }
     private void Awake()
     {
-        Destroy(this, lifespan);
+        Destroy(self, lifespan);
     }
 }
