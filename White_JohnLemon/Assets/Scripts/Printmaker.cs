@@ -5,23 +5,19 @@ using UnityEngine;
 public class Printmaker : MonoBehaviour
 {
     public GameObject Footprint;
-    public GameObject Intruder;
+    public Transform Intruder;
     public float delay = 1f; //time between footprints
+    public Quaternion Rotation;
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("MakePrint", 0f, delay);
     }
 
     // Update is called once per frame
-    void Update()
+    void MakePrint()
     {
-        float timer = delay;
-        timer -= Time.deltaTime;
-        if(timer <= 0)
-        {
-            Instantiate(Footprint, Intruder.transform);
-            timer = delay;
-        }
+        Vector3 spawnLocation = new Vector3(Intruder.position.x, 0, Intruder.position.z);
+        Instantiate(Footprint, spawnLocation, Rotation);
     }
 }
