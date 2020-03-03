@@ -10,7 +10,7 @@ public class GhostMovement : MonoBehaviour
     private Rigidbody body;
     Vector3 m_Movement;
     public GameEnding gameEnding;
-    bool m_IsPlayerInRange;
+    
 
 
     // Start is called before the first frame update
@@ -42,7 +42,7 @@ public class GhostMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Intruder"))
         {
-            m_IsPlayerInRange = true;
+            
             gameEnding.CaughtPlayer();
         }   
         
