@@ -701,7 +701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ed398f0350c3c41836eaf983061efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 5
   turnSpeed: 20
 --- !u!54 &702532716
 Rigidbody:
@@ -1154,6 +1154,7 @@ MonoBehaviour:
   - {fileID: 676475726}
   - {fileID: 1474136873}
   - {fileID: 551061270}
+  player: {fileID: 702532720}
 --- !u!195 &926084940
 NavMeshAgent:
   m_ObjectHideFlags: 0
