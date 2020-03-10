@@ -7,7 +7,7 @@ public class GameEnding : MonoBehaviour
 
 
 {
-    public float fadeDuration = .15f;
+    public float fadeDuration = .1f;
     public float displayImageDuration = 3f;
     public GameObject player;
     public CanvasGroup exitBackgroundImageCanvasGroup;
