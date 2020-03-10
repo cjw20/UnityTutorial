@@ -7,7 +7,7 @@ public class GameEnding : MonoBehaviour
 
 
 {
-    public float fadeDuration = 1f;
+    public float fadeDuration = .5f;
     public float displayImageDuration = 1f;
     public GameObject player;
     public CanvasGroup exitBackgroundImageCanvasGroup;
@@ -46,7 +46,7 @@ public class GameEnding : MonoBehaviour
         }
         else if (m_isPlayerCaught)
         {
-            EndLevel(caughtBackgroundImageCanvasGroup, true, caughtAudio);
+            EndLevel(caughtBackgroundImageCanvasGroup, false, caughtAudio);
         }
     }
 
